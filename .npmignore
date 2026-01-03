@@ -1,0 +1,32 @@
+# Source files (only publish dist)
+credentials/
+nodes/
+index.ts
+
+# Test files
+test/
+coverage/
+jest.config.js
+
+# Config files
+tsconfig.json
+.eslintrc.js
+.prettierrc
+.gitignore
+
+# Development
+scripts/
+.github/
+.vscode/
+.idea/
+
+# Documentation (keep in repo, not in npm)
+docs/
+*.md
+!README.md
+
+# Other
+*.log
+.DS_Store
+Thumbs.db
+.env*

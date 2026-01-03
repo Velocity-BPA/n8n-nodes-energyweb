@@ -1,0 +1,86 @@
+{
+  "name": "n8n-nodes-energyweb",
+  "version": "1.0.0",
+  "description": "A comprehensive n8n community node for Energy Web Chain providing 10 resources and 50+ operations for blockchain interactions, DIDs, RECs, and energy asset management.",
+  "license": "BUSL-1.1",
+  "author": {
+    "name": "Velocity BPA",
+    "email": "licensing@velobpa.com",
+    "url": "https://velobpa.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-energyweb.git"
+  },
+  "homepage": "https://github.com/Velocity-BPA/n8n-nodes-energyweb#readme",
+  "bugs": {
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-energyweb/issues"
+  },
+  "keywords": [
+    "n8n",
+    "n8n-community-node-package",
+    "energy-web",
+    "ewc",
+    "ewt",
+    "blockchain",
+    "did",
+    "decentralized-identity",
+    "rec",
+    "renewable-energy-certificates",
+    "origin",
+    "carbon-tracking",
+    "energy-sector",
+    "evm",
+    "smart-contracts",
+    "volta"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/EnergyWebApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/EnergyWeb/EnergyWeb.node.js",
+      "dist/nodes/EnergyWeb/EnergyWebTrigger.node.js"
+    ]
+  },
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.ts\"",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.0",
+    "gulp": "^4.0.2",
+    "jest": "^29.7.0",
+    "n8n-workflow": "^1.27.0",
+    "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
